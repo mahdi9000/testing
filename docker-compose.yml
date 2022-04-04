@@ -1,8 +1,12 @@
-version: "3.3"
-services:
-  sid-inquiry:
-    image: mahdi9000/cr31534test
-    # image: jtl-tkgiharbor.hq.bni.co.id/wss-dev/sid-inquiry:cr31534.1
-    build: ./
-    ports:
-      - "8081:8081"
+version: "3.8"
+
+services: 
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 3000:3000
+    volumes: 
+      - .:/app
+      - '/app/node_modules'
