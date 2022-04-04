@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  sid-inquiry:
+    image: mahdi9000/cr31534test
+    # image: jtl-tkgiharbor.hq.bni.co.id/wss-dev/sid-inquiry:cr31534.1
+    build: ./
+    ports:
+      - "8081:8081"
